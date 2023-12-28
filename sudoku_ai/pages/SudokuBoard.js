@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import Sudoku from 'Sudoku'; // Assuming Sudoku.js library is installed
+import * as sudoku from '../lib/sudoku';
+// import Sudoku from 'Sudoku'; // Assuming Sudoku.js library is installed
 
 const SudokuBoard = () => {
     const [sudokuGrid, setSudokuGrid] = useState([]);
 
     const generateNewSudoku = () => {
-        const newSudoku = Sudoku.generate(); // Assuming Sudoku.generate() generates a new Sudoku puzzle
+        const newSudoku = sudoku.generate("easy"); // Assuming sudoku.generate() generates a new Sudoku puzzle
         setSudokuGrid(newSudoku);
     };
 
